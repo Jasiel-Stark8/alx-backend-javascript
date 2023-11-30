@@ -1,9 +1,3 @@
-export default function getBudgetObject(income, gdp, capita) {
-  const budget = {
-      [income]: income,
-      [gdp]: gdp,
-      [capita]: capita,
-  };
+import getBudgetObject from './7-getBudgetObject.js';
 
-  return budget;
-}
+console.log(getBudgetObject(400, 700, 900));
