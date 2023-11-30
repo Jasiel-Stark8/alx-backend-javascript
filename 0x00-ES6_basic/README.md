@@ -1,1 +1,1 @@
-to be updated later
+ES6 basic syntaxes and semantics
