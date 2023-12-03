@@ -9,7 +9,7 @@ export default function getFullBudgetObject(income, gdp, capita) {
     },
     getIncomeInEuros() {
       const conversionRate = 0.85;
-      return `${this.income} euros`;
+      return `${this.income * conversionRate} euros`;
     },
   };
 
