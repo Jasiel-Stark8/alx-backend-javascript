@@ -28,3 +28,5 @@ class HolbertonCourse {
     return this._students;
   }
 }
+
+export default HolbertonCourse;
