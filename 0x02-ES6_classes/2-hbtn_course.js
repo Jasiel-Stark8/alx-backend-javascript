@@ -1,59 +1,58 @@
 class HolbertonCourse {
-  constructor(name, length, students){
-    this.validateName(name);
-    this.validateLength(length);
-    this.validateStudents(students);
-
-    this._name = name;
-    this._length = length;
-    this._students = students;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(newName) {
-    this.validateName(newName);
-    this._name = newName;
-  }
-
-  get length() {
-    return this._length;
-  }
-
-  set length(newLength) {
-    this.validateLength(newLength);
-    this._length = newLength;
-  }
-
-  get students() {
-    return this._students;
-  }
-
-  set students(newStudent) {
-    this.validateStudents(newStudent)
-    this._students = newStudent;
-  }
-
-  validateName(name) {
-    if (typeof name !== 'string') {
-        throw new Error('Name must be a string');
+    constructor(name, length, students) {
+        this.validateName(name);
+        this.validateLength(length);
+        this.validateStudents(students);
+        
+        this._name = name;
+        this._length = length;
+        this._students = students;
     }
-  }
 
-  validateLength(length) {
-    if (typeof length !== 'number') {
-        throw new Error('Length must be a number');
+    get name() {
+        return this._name;
     }
-  }
 
-  validateStudents(students) {
-    if (typeof students !== 'string') {
-        throw new Error('Student must be a string');
+    set name(newName) {
+        this.validateName(newName);
+        this._name = newName;
     }
-  }
 
+    get length() {
+        return this._length;
+    }
+
+    set length(newLength) {
+        this.validateLength(newLength);
+        this._length = newLength;
+    }
+
+    get students() {
+        return this._students;
+    }
+
+    set students(newStudents) {
+        this.validateStudents(newStudents);
+        this._students = newStudents;
+    }
+
+    validateName(name) {
+        if (typeof name !== 'string') {
+            throw new TypeError("Name must be a string");
+        }
+    }
+
+    validateLength(length) {
+        if (typeof length !== 'number') {
+            throw new TypeError("Length must be a number");
+        }
+    }
+
+    validateStudents(students) {
+        if (!Array.isArray(students) || !students.every(student => typeof student === 'string')) {
+            throw new TypeError("Students must be an array of strings");
+        }
+    }
 }
 
-export default HolbertonCourse
+export default HolbertonCourse;
