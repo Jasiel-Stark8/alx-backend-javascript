@@ -27,7 +27,7 @@ console.log(Human.speakAgi);
 
 class Asi extends Human {
     constructor(speak, analyze) {
-        super()
+        super(4, 'intermediate', '6k', 6)
         this.speak = speak
         this.analyze = analyze
     }
