@@ -20,7 +20,7 @@ class Pricing {
 
   set currency(newCurrency) {
     if (!(newCurrency instanceof currency)) {
-        throw new Error('Expected a currency instance')
+        throw new TypeError('Expected a currency instance')
     }
     this._currency = newCurrency;
   }
