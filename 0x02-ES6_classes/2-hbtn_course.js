@@ -29,4 +29,4 @@ class HolbertonCourse {
   }
 }
 
-export default HolbertonCourse;
+export default HolbertonCourse
