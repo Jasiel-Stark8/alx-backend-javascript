@@ -5,9 +5,31 @@ interface Student {
     location: string;
 }
 
-let student1;
-let student2;
-const studentsList = [student1, student2]
+const student1: Student = {
+    firstName: '',
+    lastName: '',
+    age: 1,
+    location: ''
+};
+
+const student2: Student = {
+    firstName: '',
+    lastName: '',
+    age: 1,
+    location: ''
+};
+
+const studentsList: Student[] = [student1, student2];
+
+let tableRows = studentsList.map(student => {
+    return `
+    <tr>
+        <td>${student.firstName}</td>
+        <td>${student.lastName}</td>
+        <td>${student.age}</td>
+        <td>${student.location}</td>
+    </tr>`;
+}).join('');
 
 const table = `
 <table>
@@ -20,13 +42,9 @@ const table = `
   </thead>
   <tbody>
     <tr>
-      <td>Data for Column 1</td>
-      <td>Data for Column 2</td>
-      <td>Data for Column 3</td>
+    ${tableRows}
     </tr>
   </tbody>
 </table>`;
 
-studentsList.forEach(student => {
-    // 
-});
+document.body.innerHTML += table;
