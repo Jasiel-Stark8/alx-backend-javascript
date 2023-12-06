@@ -41,9 +41,7 @@ const table = `
     </tr>
   </thead>
   <tbody>
-    <tr>
     ${tableRows}
-    </tr>
   </tbody>
 </table>`;
 
