@@ -1,49 +1,37 @@
-interface Student {
-  firstName: string;
-  lastName: string;
-  age: number;
+interface TeacherInterface {
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
   location: string;
+  yearsOfExperience?: number;
+  [key: string]: boolean | number | string | undefined;
 }
 
-const student1: Student = {
-  firstName: 'Alice',
-  lastName: 'Smith',
-  age: 24,
-  location: 'California'
+class Teacher implements TeacherInterface {
+  // Private Properties
+  public readonly firstName: string;
+  public readonly lastName: string;
+
+  // Public Properties
+  public fullTimeEmployee: boolean;
+  public location: string;
+  public yearsOfExperience: number;
+
+  constructor(firstName: string, lastName: string, fullTimeEmployee: boolean, location: string, yearsOfExperience?: number) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.fullTimeEmployee = fullTimeEmployee;
+    this.location = location;
+    this.yearsOfExperience = yearsOfExperience;
+  }
+}
+
+const teacher1: TeacherInterface = {
+  firstName: 'Monaline',
+  fullTimeEmployee: false,
+  lastName: 'Gonzalez',
+  location: 'Kigali',
+  contract: false,
 };
 
-const student2: Student = {
-  firstName: 'Bob',
-  lastName: 'Johnson',
-  age: 30,
-  location: 'New York'
-};
-
-const studentsList: Student[] = [student1, student2];
-
-let tableRows = studentsList.map(student => {
-  return `
-  <tr>
-    <td>${student.firstName}</td>
-    <td>${student.lastName}</td>
-    <td>${student.age}</td>
-    <td>${student.location}</td>
-  </tr>`;
-}).join('');
-
-const table = `
-<table>
-  <thead>
-    <tr>
-      <th>firstName</th>
-      <th>lastName</th>
-      <th>age</th>
-      <th>location</th>
-    </tr>
-  </thead>
-  <tbody>
-    ${tableRows}
-  </tbody>
-</table>`;
-
-document.body.innerHTML += table;
+console.log(teacher1);

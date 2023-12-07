@@ -1,2 +1,2 @@
-gpt.ts(27,1): error TS2552: Cannot find name 'studentsList'. Did you mean 'studentsLists'?
-gpt.ts(28,15): error TS2552: Cannot find name 'table'. Did you mean 'table1'?
+main.ts(10,7): error TS2420: Class 'Teacher' incorrectly implements interface 'TeacherInterface'.
+  Index signature for type 'string' is missing in type 'Teacher'.
