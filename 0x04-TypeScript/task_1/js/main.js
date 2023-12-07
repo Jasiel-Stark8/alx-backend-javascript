@@ -34,5 +34,5 @@ var director1 = {
     numberOfReports: 2,
     yearsOfExperience: 2
 };
-console.log(teacher1);
-console.log(director1);
+console.log(typeof (teacher1), teacher1);
+console.log(typeof (director1), director1);
