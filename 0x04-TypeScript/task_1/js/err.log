@@ -1,2 +1,0 @@
-main.ts(10,7): error TS2420: Class 'Teacher' incorrectly implements interface 'TeacherInterface'.
-  Index signature for type 'string' is missing in type 'Teacher'.

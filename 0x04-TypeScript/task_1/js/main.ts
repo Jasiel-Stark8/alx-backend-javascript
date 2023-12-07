@@ -7,6 +7,10 @@ interface TeacherInterface {
   [key: string]: boolean | number | string | undefined;
 }
 
+interface DirectorsInterface extends TeacherInterface {
+  numberOfReports:  number;
+}
+
 class Teacher implements TeacherInterface {
   // Private Properties
   public readonly firstName: string;
@@ -16,6 +20,7 @@ class Teacher implements TeacherInterface {
   public fullTimeEmployee: boolean;
   public location: string;
   public yearsOfExperience: number;
+  [key: string]: boolean | number | string | undefined;
 
   constructor(firstName: string, lastName: string, fullTimeEmployee: boolean, location: string, yearsOfExperience?: number) {
     this.firstName = firstName;
@@ -34,4 +39,35 @@ const teacher1: TeacherInterface = {
   contract: false,
 };
 
+class Directors implements DirectorsInterface {
+  public readonly firstName: string;
+  public readonly lastName: string;
+
+  // Public Properties
+  public fullTimeEmployee: boolean;
+  public location: string;
+  public yearsOfExperience: number;
+  [key: string]: boolean | number | string | undefined;
+  public numberOfReports:  number;
+
+  constructor(firstName: string, lastName: string, fullTimeEmployee: boolean, location: string, numberOfReports: number, yearsOfExperience?: number) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.fullTimeEmployee = fullTimeEmployee;
+    this.location = location;
+    this.numberOfReports = numberOfReports;
+    this.yearsOfExperience = yearsOfExperience;
+  }
+}
+
+const director1: Directors = {
+  firstName: 'Nirmaba',
+  lastName: 'Kugali',
+  fullTimeEmployee: false,
+  location: 'Nairobi',
+  numberOfReports: 2,
+  yearsOfExperience: 2,
+};
+
 console.log(teacher1);
+console.log(director1);

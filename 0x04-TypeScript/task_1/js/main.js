@@ -1,5 +1,4 @@
 var Teacher = /** @class */ (function () {
-    // Constructor
     function Teacher(firstName, lastName, fullTimeEmployee, location, yearsOfExperience) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -9,12 +8,31 @@ var Teacher = /** @class */ (function () {
     }
     return Teacher;
 }());
-// Example usage
-var teacher3 = {
-    firstName: 'John',
+var teacher1 = {
+    firstName: 'Monaline',
     fullTimeEmployee: false,
-    lastName: 'Doe',
-    location: 'London',
+    lastName: 'Gonzalez',
+    location: 'Kigali',
     contract: false
 };
-console.log(teacher3);
+var Directors = /** @class */ (function () {
+    function Directors(firstName, lastName, fullTimeEmployee, location, numberOfReports, yearsOfExperience) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullTimeEmployee = fullTimeEmployee;
+        this.location = location;
+        this.numberOfReports = numberOfReports;
+        this.yearsOfExperience = yearsOfExperience;
+    }
+    return Directors;
+}());
+var director1 = {
+    firstName: 'Nirmaba',
+    lastName: 'Kugali',
+    fullTimeEmployee: false,
+    location: 'Nairobi',
+    numberOfReports: 2,
+    yearsOfExperience: 2
+};
+console.log(teacher1);
+console.log(director1);
